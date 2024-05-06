@@ -13,8 +13,6 @@ app.use("/auth",auth_router)
 var UserArc = require("./router/UserArchive")
 app.use("/UserArchive",UserArc)
 
-
-
 //var sign_router=require("./router/sign_in")
 //app.use("/sign",sign_router) 
  
@@ -49,13 +47,6 @@ app.put('/product', function (request, response) {
 
 
 
-
-
-
-
-
-
-
 app.get('/customer*', function (request, response) {
     //customer* custommer ile başlayan
     //*custommer  içinde customer geçen 
@@ -64,8 +55,6 @@ app.get('/customer*', function (request, response) {
 })
 
 app.get('/product', function (request, response) {
-    //request de paremetre tanımlanabilir 
-    //http://localhost:8080/product?id=1&categoryid=2
     console.log("ID:" + request.query.id);
     console.log("CATAGORY ID:" + request.query.categoryid);
     response.send('Merhaba')
